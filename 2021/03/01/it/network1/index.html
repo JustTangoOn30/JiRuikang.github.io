@@ -1,209 +1,279 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="一句话解释网络是什么利用通信设备和线路，将分布在不同地理位置上的具有独立功能的多台计算机、终端及其附属设备在物理上互联，按照网络协议相互通信，以共享硬件、软件和数据资源为目标的系统。 过去第一个网络：ARPANET（Internet的前身），1969年美国我国第一次接入网络：1994年 网络发展的阶段面向终端的计算机网络（20世纪60年代中期以前）单计算机联机系统：当时主机昂贵，线路便宜。为了共享">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="许云筝">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="一句话解释网络是什么利用通信设备和线路，将分布在不同地理位置上的具有独立功能的多台计算机、终端及其附属设备在物理上互联，按照网络协议相互通信，以共享硬件、软件和数据资源为目标的系统。 过去第一个网络：ARPANET（Internet的前身），1969年美国我国第一次接入网络：1994年 网络发展的阶段面向终端的计算机网络（20世纪60年代中期以前）单计算机联机系统：当时主机昂贵，线路便宜。为了共享">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机网络-概述">
 <meta property="og:url" content="https://github.com/XuYunzheng/XuYunzheng.github.io/2021/03/01/it/network1/index.html">
 <meta property="og:site_name" content="许云筝的博客">
 <meta property="og:description" content="一句话解释网络是什么利用通信设备和线路，将分布在不同地理位置上的具有独立功能的多台计算机、终端及其附属设备在物理上互联，按照网络协议相互通信，以共享硬件、软件和数据资源为目标的系统。 过去第一个网络：ARPANET（Internet的前身），1969年美国我国第一次接入网络：1994年 网络发展的阶段面向终端的计算机网络（20世纪60年代中期以前）单计算机联机系统：当时主机昂贵，线路便宜。为了共享">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-28T16:00:00.000Z">
 <meta property="article:modified_time" content="2021-09-06T03:51:48.000Z">
 <meta property="article:author" content="许云筝">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>计算机网络-概述 - 许云筝的博客</title>
 
-<link rel="canonical" href="https://github.com/XuYunzheng/XuYunzheng.github.io/2021/03/01/it/network1/">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-Hans'
-  };
-</script>
 
-  <title>计算机网络-概述 | 许云筝的博客</title>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"github.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
 
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<body>
+  
 
-</head>
+  <header>
+    
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Navigationsleiste an/ausschalten">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">许云筝的博客</h1>
-      <span class="logo-line-after"><i></i></span>
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
     </a>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Startseite</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archiv</a>
-
-  </li>
-  </ul>
 </nav>
 
+  
 
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="计算机网络-概述"></span>
+          
+        </div>
 
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-03-01 00:00" pubdate>
+          2021年3月1日 凌晨
+        </time>
+      </span>
+    
+  </div>
 
-</div>
-    </header>
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.7k 字
+        
+      </span>
+    
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          15 分钟
+        
+      </span>
+    
+
+    
+    
   </div>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://github.com/XuYunzheng/XuYunzheng.github.io/2021/03/01/it/network1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="许云筝">
-      <meta itemprop="description" content="看得见远方，追的上路人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="许云筝的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          计算机网络-概述
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
-
-              <time title="Erstellt: 2021-03-01 00:00:00" itemprop="dateCreated datePublished" datetime="2021-03-01T00:00:00+08:00">2021-03-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2021-09-06 11:51:48" itemprop="dateModified" datetime="2021-09-06T11:51:48+08:00">2021-09-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">in</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/it/" itemprop="url" rel="index"><span itemprop="name">IT栈</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+        
+      </div>
 
       
-        <h2 id="一句话解释网络是什么"><a href="#一句话解释网络是什么" class="headerlink" title="一句话解释网络是什么"></a>一句话解释网络是什么</h2><p>利用通信设备和线路，将分布在不同地理位置上的具有独立功能的多台计算机、终端及其附属设备在物理上互联，按照网络协议相互通信，以共享硬件、软件和数据资源为目标的系统。</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">计算机网络-概述</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="一句话解释网络是什么"><a href="#一句话解释网络是什么" class="headerlink" title="一句话解释网络是什么"></a>一句话解释网络是什么</h2><p>利用通信设备和线路，将分布在不同地理位置上的具有独立功能的多台计算机、终端及其附属设备在物理上互联，按照网络协议相互通信，以共享硬件、软件和数据资源为目标的系统。</p>
 <h2 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h2><p>第一个网络：ARPANET（Internet的前身），1969年美国<br>我国第一次接入网络：1994年</p>
 <h3 id="网络发展的阶段"><a href="#网络发展的阶段" class="headerlink" title="网络发展的阶段"></a>网络发展的阶段</h3><h4 id="面向终端的计算机网络（20世纪60年代中期以前）"><a href="#面向终端的计算机网络（20世纪60年代中期以前）" class="headerlink" title="面向终端的计算机网络（20世纪60年代中期以前）"></a>面向终端的计算机网络（20世纪60年代中期以前）</h4><p>单计算机联机系统：当时主机昂贵，线路便宜。为了共享主机的资源，进行信息的采集和综合处理而产生。<br>双计算机联机系统：主计算机负责数据处理，另一台负责通信控制，从而使主计算机摆脱通信负担。<br>增加集中器：节省了通信费用，提高线路的利用率。</p>
 <h4 id="处理机互联-amp-主机互联（20世纪60年代中期以后）"><a href="#处理机互联-amp-主机互联（20世纪60年代中期以后）" class="headerlink" title="处理机互联 &amp; 主机互联（20世纪60年代中期以后）"></a>处理机互联 &amp; 主机互联（20世纪60年代中期以后）</h4><p>主机直接相连：主机既承担数据处理工作，又承担通信工作<br>通过通信控制处理机（CCP）间接把各主计算机连接：CCP相连组成了通信子网，主机相连组成了资源子网</p>
@@ -215,191 +285,365 @@
 <h4 id="按传输介质划分"><a href="#按传输介质划分" class="headerlink" title="按传输介质划分"></a>按传输介质划分</h4><p>有线网：双绞线、同轴电缆、光纤等<br>无线网：使用电磁波作为传输介质的计算机网络，可以传送无线电波和卫星信号</p>
 <h4 id="按拓扑结构划分"><a href="#按拓扑结构划分" class="headerlink" title="按拓扑结构划分"></a>按拓扑结构划分</h4><p>1、总线型拓扑结构是指网络中的各个节点设备均挂接在一根总线上，实现计算机网络的功能。优点是结构简单、使用电缆少、安装方便、扩展方便；缺点是双向传输、实时性差、总线上任何一点故障都会整个瘫痪。常用在局域网。<br>2、星型拓扑结构是指网络中各节点以星型方式连接成网，网络有中央节点，其他节点（工作站、服务器）都与中央节点直接相连。优点是易于增加新站点、易于实现数据安全性和优先级的控制、易于实现网络监控；缺点是集中控制、对中心节点依赖大、线路利用率不高、信息容量浪费较大。常用在实验室、机房。<br>3、环型拓扑结构是指网络中的各节点通过环路接口连在一条首尾相连的闭合型通信线路中。优点是结构简单、传输延时确定；缺点是环中节点出现故障全体瘫痪、节点加入和退出以及环路的维护和管理复杂。<br>4、树型拓扑结构是指像一颗倒置的树，顶端是树根，树根以下带分支，每个分支还可以再带子分支，树根接收各站点发送的数据，然后再广播发到全网。优点（与星型相比）是节省线路、成本低、易扩展；缺点是对高层节点和链路要求高。适用于分级控制，如：公务员<br>5、网状型拓扑结构是指网络中各个节点通过传输线连接起来，每一个节点至少与其他两个节点相连。优点是任意两个节点间的通信无需路由，且有专线相连，没有等待延迟，所以通信速度快、可靠性高；缺点是结构复杂、投资巨大。<br>6、混合型拓扑结构。如：星型&#x2F;总线型拓扑结构，用一条&#x2F;多条总线把多组设备连接起来，相连的每组设备本身呈星型分布。</p>
 
-    </div>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
 
+<span class="category-chains">
+  
+  
     
-    
-    
-
-      <footer class="post-footer">
-
+      <span class="category-chain">
         
+  <a href="/categories/it/" class="category-chain-item">IT栈</a>
+  
+  
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/02/01/it/composition2/" rel="prev" title="计算机组成-原理">
-      <i class="fa fa-chevron-left"></i> 计算机组成-原理
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/04/01/it/network2/" rel="next" title="计算机网络-原理ing">
-      计算机网络-原理ing <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
+      </span>
     
-  </article>
+  
+</span>
+
+    </div>
   
   
+</div>
+
+
+              
   
 
-
-
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>计算机网络-概述</div>
+      <div>https://github.com/XuYunzheng/XuYunzheng.github.io/2021/03/01/it/network1/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>许云筝</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年3月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
           </div>
-          
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
 
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/04/01/it/network2/" title="计算机网络-原理ing">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">计算机网络-原理ing</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/02/01/it/composition2/" title="计算机组成-原理">
+                        <span class="hidden-mobile">计算机组成-原理</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
       }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
     });
-  }
+  });
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Inhaltsverzeichnis
-        </li>
-        <li class="sidebar-nav-overview">
-          Übersicht
-        </li>
-      </ul>
+  <script>Fluid.plugins.codeWidget();</script>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E5%8F%A5%E8%AF%9D%E8%A7%A3%E9%87%8A%E7%BD%91%E7%BB%9C%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">一句话解释网络是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E5%8E%BB"><span class="nav-number">2.</span> <span class="nav-text">过去</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E7%9A%84%E9%98%B6%E6%AE%B5"><span class="nav-number">2.1.</span> <span class="nav-text">网络发展的阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E7%BB%88%E7%AB%AF%E7%9A%84%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%EF%BC%8820%E4%B8%96%E7%BA%AA60%E5%B9%B4%E4%BB%A3%E4%B8%AD%E6%9C%9F%E4%BB%A5%E5%89%8D%EF%BC%89"><span class="nav-number">2.1.1.</span> <span class="nav-text">面向终端的计算机网络（20世纪60年代中期以前）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%9C%BA%E4%BA%92%E8%81%94-amp-%E4%B8%BB%E6%9C%BA%E4%BA%92%E8%81%94%EF%BC%8820%E4%B8%96%E7%BA%AA60%E5%B9%B4%E4%BB%A3%E4%B8%AD%E6%9C%9F%E4%BB%A5%E5%90%8E%EF%BC%89"><span class="nav-number">2.1.2.</span> <span class="nav-text">处理机互联 &amp; 主机互联（20世纪60年代中期以后）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E5%9C%A8"><span class="nav-number">3.</span> <span class="nav-text">现在</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">3.1.</span> <span class="nav-text">网络的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="nav-number">3.2.</span> <span class="nav-text">网络的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">3.3.</span> <span class="nav-text">网络的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E7%BD%91%E7%BB%9C%E8%A6%86%E7%9B%96%E8%8C%83%E5%9B%B4%E5%88%86%E7%B1%BB"><span class="nav-number">3.3.1.</span> <span class="nav-text">按网络覆盖范围分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93%E6%8A%80%E6%9C%AF%E5%88%92%E5%88%86"><span class="nav-number">3.3.2.</span> <span class="nav-text">按网络传输技术划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E7%BD%91%E7%BB%9C%E4%BD%BF%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="nav-number">3.3.3.</span> <span class="nav-text">按网络使用范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8%E5%88%92%E5%88%86"><span class="nav-number">3.3.4.</span> <span class="nav-text">按传输介质划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84%E5%88%92%E5%88%86"><span class="nav-number">3.3.5.</span> <span class="nav-text">按拓扑结构划分</span></a></li></ol></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">许云筝</p>
-  <div class="site-description" itemprop="description">看得见远方，追的上路人</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">34</span>
-          <span class="site-state-item-name">Artikel</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">Kategorien</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">许云筝</span>
-</div>
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
 
-<script src="/js/utils.js"></script>
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
 
-<script src="/js/motion.js"></script>
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
 
 
-<script src="/js/schemes/muse.js"></script>
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
 
 
-<script src="/js/next-boot.js"></script>
 
 
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>

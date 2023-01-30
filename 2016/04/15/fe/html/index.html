@@ -1,211 +1,281 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="是什么HTML（Hypertext Marked Language超文本标记语言）是用来描述网页结构和表现的语言，是一种超文本标记语言，而不是编程语言。多用HTML描述网页结构，由CSS来装饰各个节点的表现。 为什么Web浏览器（如谷歌浏览器、Internet Explorer、Firefox 和 Safari ）可以将HTML文件解析成可视化的网页。与此相关的便是浏览器的工作原理。而HTML5具">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="许云筝">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="是什么HTML（Hypertext Marked Language超文本标记语言）是用来描述网页结构和表现的语言，是一种超文本标记语言，而不是编程语言。多用HTML描述网页结构，由CSS来装饰各个节点的表现。 为什么Web浏览器（如谷歌浏览器、Internet Explorer、Firefox 和 Safari ）可以将HTML文件解析成可视化的网页。与此相关的便是浏览器的工作原理。而HTML5具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML（结构）">
 <meta property="og:url" content="https://github.com/XuYunzheng/XuYunzheng.github.io/2016/04/15/fe/html/index.html">
 <meta property="og:site_name" content="许云筝的博客">
 <meta property="og:description" content="是什么HTML（Hypertext Marked Language超文本标记语言）是用来描述网页结构和表现的语言，是一种超文本标记语言，而不是编程语言。多用HTML描述网页结构，由CSS来装饰各个节点的表现。 为什么Web浏览器（如谷歌浏览器、Internet Explorer、Firefox 和 Safari ）可以将HTML文件解析成可视化的网页。与此相关的便是浏览器的工作原理。而HTML5具">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://github.com/assets/html/deferasync.png">
 <meta property="article:published_time" content="2016-04-14T16:00:00.000Z">
 <meta property="article:modified_time" content="2021-08-31T04:39:40.000Z">
 <meta property="article:author" content="许云筝">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://github.com/assets/html/deferasync.png">
+  
+  
+  
+  <title>HTML（结构） - 许云筝的博客</title>
 
-<link rel="canonical" href="https://github.com/XuYunzheng/XuYunzheng.github.io/2016/04/15/fe/html/">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-Hans'
-  };
-</script>
 
-  <title>HTML（结构） | 许云筝的博客</title>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"github.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
 
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<body>
+  
 
-</head>
+  <header>
+    
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Navigationsleiste an/ausschalten">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">许云筝的博客</h1>
-      <span class="logo-line-after"><i></i></span>
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
     </a>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Startseite</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archiv</a>
-
-  </li>
-  </ul>
 </nav>
 
+  
 
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="HTML（结构）"></span>
+          
+        </div>
 
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2016-04-15 00:00" pubdate>
+          2016年4月15日 凌晨
+        </time>
+      </span>
+    
+  </div>
 
-</div>
-    </header>
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7k 字
+        
+      </span>
+    
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          59 分钟
+        
+      </span>
+    
+
+    
+    
   </div>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://github.com/XuYunzheng/XuYunzheng.github.io/2016/04/15/fe/html/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="许云筝">
-      <meta itemprop="description" content="看得见远方，追的上路人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="许云筝的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          HTML（结构）
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
-
-              <time title="Erstellt: 2016-04-15 00:00:00" itemprop="dateCreated datePublished" datetime="2016-04-15T00:00:00+08:00">2016-04-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2021-08-31 12:39:40" itemprop="dateModified" datetime="2021-08-31T12:39:40+08:00">2021-08-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">in</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/fe/" itemprop="url" rel="index"><span itemprop="name">前端栈</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+        
+      </div>
 
       
-        <h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><p>HTML（Hypertext Marked Language超文本标记语言）是用来描述网页结构和表现的语言，是一种超文本标记语言，而不是编程语言。多用HTML描述网页结构，由CSS来装饰各个节点的表现。</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">HTML（结构）</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><p>HTML（Hypertext Marked Language超文本标记语言）是用来描述网页结构和表现的语言，是一种超文本标记语言，而不是编程语言。多用HTML描述网页结构，由CSS来装饰各个节点的表现。</p>
 <h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><p>Web浏览器（如谷歌浏览器、Internet Explorer、Firefox 和 Safari ）可以将HTML文件解析成可视化的网页。与此相关的便是浏览器的工作原理。而HTML5具有超集方式的简易性、运用广泛的可拓展性、灵活应变的平台适应性以及简单的通用性。凭借着这些特性，HTML越来越受到人们的喜爱。</p>
 <h2 id="怎么办"><a href="#怎么办" class="headerlink" title="怎么办"></a>怎么办</h2><p>基本结构<br>DOCTYPE声明了文档的类型<br>html标签是 HTML 页面的根元素<br>head标签包含了文档的元数据（meta），如meta charset&#x3D;”utf-8”定义网页编码格式为utf-8。<br>title标签定义文档的标题<br>body标签定义文档的主体，即网页可见的页面内容</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt; </span><br><span class="line">&lt;html&gt;  </span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;页面标题(w3cschool.cn)&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;header&gt;</span><br><span class="line">            &lt;h1&gt;HTML5学习页面&lt;/h1&gt;</span><br><span class="line">            &lt;nav&gt;</span><br><span class="line">                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;是什么&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                &lt;li&gt;&lt;a href=&quot;example.html&quot;&gt;为什么&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                &lt;li&gt;&lt;a href=&quot;service_one.html&quot;&gt;怎么办&lt;/a&gt;&lt;/li&gt;          </span><br><span class="line">                &lt;li&gt;&lt;a href=&quot;aboutus_one.html&quot;&gt;难点&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;/nav&gt;</span><br><span class="line">        &lt;/header&gt;</span><br><span class="line">        &lt;aside&gt;</span><br><span class="line">            &lt;h4&gt;侧边栏&lt;/h4&gt;</span><br><span class="line">            &lt;p&gt;这是一个侧边栏&lt;/p&gt;</span><br><span class="line">        &lt;/aside&gt;</span><br><span class="line">        &lt;article&gt;</span><br><span class="line">            &lt;p&gt;</span><br><span class="line">            div：应用广泛，任意一个区域</span><br><span class="line">            section：包含的内容是一个明确的主题，通常有标题区域</span><br><span class="line">            article：如果我们的页面中需要一个单独的模块来实现一个单独的功能，就用article，其他的时section</span><br><span class="line">            &lt;/p&gt;</span><br><span class="line">            &lt;p&gt;</span><br><span class="line">                &lt;figure&gt;</span><br><span class="line">                    &lt;img src=&quot;img_pulpit.jpg&quot; alt=&quot;The Pulpit Rock&quot; width=&quot;304&quot; height=&quot;228&quot;&gt;</span><br><span class="line">                    &lt;figcaption&gt;figure：图片等流figcaption：图片的主题&lt;/figcaption&gt;</span><br><span class="line">                  &lt;/figure&gt;</span><br><span class="line">            &lt;/p&gt;</span><br><span class="line">        &lt;/article&gt;</span><br><span class="line">        &lt;footer&gt;</span><br><span class="line">          &lt;p&gt;&lt;time pubdate datetime=&quot;2012-03-01&quot;&gt;&lt;/time&gt;&lt;/p&gt;</span><br><span class="line">        &lt;/footer&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
@@ -221,7 +291,7 @@
 
 <p>html的解析遇到script标签会暂停解析，转而下载script资源，下载完成后执行script，再恢复文档的解析和渲染<br>所以推荐js资源再最后引入，如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    ......</span><br><span class="line">    &lt;script src=&quot;script/default.js&quot; type=&quot;text/javascript&quot;&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="/assets/html/deferasync.png" alt="deferasync"><br>为了解决script的阻塞问题，script新增了两个属性，分别是延迟（defer）和异步（async）</p>
+<p><img src="/assets/html/deferasync.png" srcset="/img/loading.gif" lazyload alt="deferasync"><br>为了解决script的阻塞问题，script新增了两个属性，分别是延迟（defer）和异步（async）</p>
 <h3 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h3><p>块级元素：hx、p、ul、dl、ol、table、div<br>行内元素：a、img、li、span<br>空元素：br<br>默认情况下，HTML 会自动地在块级元素前后添加一个额外的空行，比如段落、标题元素前后。<br>HTML 代码中的所有连续的空行（换行）也被显示为一个空格。<br>最常用的元素div和span将元素组合起来，两者无意义，专用布局，H5提倡用语义化标签代替它</p>
 <h3 id="mata标签"><a href="#mata标签" class="headerlink" title="mata标签"></a>mata标签</h3><p>meta标签可以定义的元数据有四种：<br>1、声明文档内容的所用编码charset&#x3D;”utf-8”<br>2、完善文档描述信息，让搜索引擎更容易解析索引，提升SEO</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;application-name&quot; content=&quot;TOOl&quot;&gt;</span><br></pre></td></tr></table></figure>
@@ -236,188 +306,359 @@
 <h3 id="table标签"><a href="#table标签" class="headerlink" title="table标签"></a>table标签</h3><p>没有语义化、自适应性差、可维护性差</p>
 <h3 id="iframe标签"><a href="#iframe标签" class="headerlink" title="iframe标签"></a>iframe标签</h3><p>iframe会阻塞页面加载，极度拉长首屏显示时间，可以制造点击劫持等，非必要不使用。需要使用的场景如下：<br>1、Hybrid App中常用的JSBridge，通过动态添加iframe元素，再定义src属性，最后发起请求来唤起某个功能<br>2、嵌入广告等第三方内容<br>3、跨域通信<br>4、实现长轮询（将被H5的WebSocket取代）<br>5、无刷新文件上传</p>
 
-    </div>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
 
+<span class="category-chains">
+  
+  
     
-    
-    
-
-      <footer class="post-footer">
-
+      <span class="category-chain">
         
+  <a href="/categories/fe/" class="category-chain-item">前端栈</a>
+  
+  
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item"></div>
-      <div class="post-nav-item">
-    <a href="/2016/05/15/fe/css/" rel="next" title="CSS（装饰）">
-      CSS（装饰） <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
+      </span>
     
-  </article>
+  
+</span>
+
+    </div>
   
   
+</div>
+
+
+              
   
 
-
-
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>HTML（结构）</div>
+      <div>https://github.com/XuYunzheng/XuYunzheng.github.io/2016/04/15/fe/html/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>许云筝</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2016年4月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
           </div>
-          
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
 
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/05/15/fe/css/" title="CSS（装饰）">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">CSS（装饰）</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
       }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
     });
-  }
+  });
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Inhaltsverzeichnis
-        </li>
-        <li class="sidebar-nav-overview">
-          Übersicht
-        </li>
-      </ul>
+  <script>Fluid.plugins.codeWidget();</script>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88"><span class="nav-number">2.</span> <span class="nav-text">为什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%8A%9E"><span class="nav-number">3.</span> <span class="nav-text">怎么办</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80IN%E7%9A%84HTML5"><span class="nav-number">4.</span> <span class="nav-text">最IN的HTML5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5%E7%89%B9%E6%80%A7"><span class="nav-number">4.1.</span> <span class="nav-text">HTML5特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5%E7%9A%84%E4%BC%98%E5%8A%BF%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-number">4.2.</span> <span class="nav-text">HTML5的优势有哪些?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5%E7%9A%84%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5"><span class="nav-number">4.3.</span> <span class="nav-text">HTML5的支持情况</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%80%E5%B7%A7%E7%B4%AF%E8%AE%A1"><span class="nav-number">5.</span> <span class="nav-text">技巧累计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML%E9%80%9F%E6%9F%A5%E5%88%97%E8%A1%A8"><span class="nav-number">5.1.</span> <span class="nav-text">HTML速查列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS%E5%92%8CJS"><span class="nav-number">5.2.</span> <span class="nav-text">CSS和JS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">5.3.</span> <span class="nav-text">盒模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mata%E6%A0%87%E7%AD%BE"><span class="nav-number">5.4.</span> <span class="nav-text">mata标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#a%E6%A0%87%E7%AD%BE"><span class="nav-number">5.5.</span> <span class="nav-text">a标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#img%E6%A0%87%E7%AD%BE"><span class="nav-number">5.6.</span> <span class="nav-text">img标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#input%E6%A0%87%E7%AD%BE"><span class="nav-number">5.7.</span> <span class="nav-text">input标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#table%E6%A0%87%E7%AD%BE"><span class="nav-number">5.8.</span> <span class="nav-text">table标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe%E6%A0%87%E7%AD%BE"><span class="nav-number">5.9.</span> <span class="nav-text">iframe标签</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">许云筝</p>
-  <div class="site-description" itemprop="description">看得见远方，追的上路人</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">34</span>
-          <span class="site-state-item-name">Artikel</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">Kategorien</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">许云筝</span>
-</div>
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
 
-<script src="/js/utils.js"></script>
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
 
-<script src="/js/motion.js"></script>
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
 
 
-<script src="/js/schemes/muse.js"></script>
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
 
 
-<script src="/js/next-boot.js"></script>
 
 
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
