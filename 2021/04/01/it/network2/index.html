@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="传输介质传输网络数据，分为有线和无线两种。 有线介质光缆（光纤）：带宽极大，传输速率1G-10T&#x2F;s，传输距离远，误码率低，抗干扰能力强，价格昂贵，安装困难。主要用于建筑物之间的连接。双绞线：传输速率100M&#x2F;s，抗干扰能力差，价格便宜，主要用于星型网络，建筑内部的布线。同轴电缆：抗干扰能力较好，传输距离比双绞线稍长，现在只是用于干扰很强的地方。光缆、同轴电缆、双绞线是构建局域">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络-原理ing">
+<meta property="og:url" content="https://github.com/XuYunzheng/XuYunzheng.github.io/2021/04/01/it/network2/index.html">
+<meta property="og:site_name" content="许云筝的博客">
+<meta property="og:description" content="传输介质传输网络数据，分为有线和无线两种。 有线介质光缆（光纤）：带宽极大，传输速率1G-10T&#x2F;s，传输距离远，误码率低，抗干扰能力强，价格昂贵，安装困难。主要用于建筑物之间的连接。双绞线：传输速率100M&#x2F;s，抗干扰能力差，价格便宜，主要用于星型网络，建筑内部的布线。同轴电缆：抗干扰能力较好，传输距离比双绞线稍长，现在只是用于干扰很强的地方。光缆、同轴电缆、双绞线是构建局域">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-03-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-11-15T15:47:36.000Z">
+<meta property="article:author" content="许云筝">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://github.com/XuYunzheng/XuYunzheng.github.io/2021/04/01/it/network2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>计算机网络-原理ing | 许云筝的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">许云筝的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Startseite</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archiv</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://github.com/XuYunzheng/XuYunzheng.github.io/2021/04/01/it/network2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="许云筝">
+      <meta itemprop="description" content="看得见远方，追的上路人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="许云筝的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算机网络-原理ing
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              <time title="Erstellt: 2021-04-01 00:00:00" itemprop="dateCreated datePublished" datetime="2021-04-01T00:00:00+08:00">2021-04-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2021-11-15 23:47:36" itemprop="dateModified" datetime="2021-11-15T23:47:36+08:00">2021-11-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/it/" itemprop="url" rel="index"><span itemprop="name">IT栈</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="传输介质"><a href="#传输介质" class="headerlink" title="传输介质"></a>传输介质</h2><p>传输网络数据，分为有线和无线两种。</p>
+<h3 id="有线介质"><a href="#有线介质" class="headerlink" title="有线介质"></a>有线介质</h3><p>光缆（光纤）：带宽极大，传输速率1G-10T&#x2F;s，传输距离远，误码率低，抗干扰能力强，价格昂贵，安装困难。主要用于建筑物之间的连接。<br>双绞线：传输速率100M&#x2F;s，抗干扰能力差，价格便宜，主要用于星型网络，建筑内部的布线。<br>同轴电缆：抗干扰能力较好，传输距离比双绞线稍长，现在只是用于干扰很强的地方。<br>光缆、同轴电缆、双绞线是构建局域网的三种传输介质。普通方案是楼内双绞线，楼外同轴电缆。</p>
+<h3 id="无线介质"><a href="#无线介质" class="headerlink" title="无线介质"></a>无线介质</h3><p>无线电波：全方向传输，使用天线，通信质量差，连接距离是全球。<br>蓝牙：无线电波的一种。10m-100m。<br>微波：直线传输，分为地面微波接力通信和卫星通信，50km<br>红外线通信：不需要天线，有方向性，不能在室外应用，市内短距离，常用于电器遥控<br>激光：传输距离远、损耗小、质量高。</p>
+<h2 id="网络连接设备"><a href="#网络连接设备" class="headerlink" title="网络连接设备"></a>网络连接设备</h2><p>引导网络信息到达目标节点。</p>
+<h3 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a>网卡</h3><p>网络接口卡，网络适配器，在局域网中用于将计算机与网络相连，工作在数据链路层（网线一头连网卡，一头连集线器），每块网卡有唯一固定的MAC地址。</p>
+<h3 id="调制解调器"><a href="#调制解调器" class="headerlink" title="调制解调器"></a>调制解调器</h3><p>也叫MODEM，用于拨号上网，工作在物理层。调制是将计算机的数字信号转换为模拟信号传送出去；解调是将已调制的模拟信号转换为数字信号供计算机使用。MODEM有内置式和外置式两种，内置式如果带有LAN口其实相当于网卡。</p>
+<h3 id="集线器"><a href="#集线器" class="headerlink" title="集线器"></a>集线器</h3><p>是局域网中的星型连接点，Hub，扩充端口、放大信号。工作在物理层。</p>
+<h3 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h3><p>Switch，即交换式集线器，是一种高性能的网络连接、数据转发设备，通常工作在数据链路层。交换机是一种用于电（光）信号转发的网络设备，它可以为接入交换机的任意两个网络节点提供独享的电信号通路。交换机是组成局域网不可缺少的硬件设备，提供局域网内多个子网互联的功能。</p>
+<h3 id="网桥"><a href="#网桥" class="headerlink" title="网桥"></a>网桥</h3><p>用来连接两个或多个网段的网络互联设备。根据物理地址来过滤、存储、转发数据帧。连接两个或几个同构的局域网，工作在数据链路层。同构是指网络拓扑结构、通信协议相同。</p>
+<h3 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h3><p>Gateway，连接异构网络，不仅有路由功能，还能实现不同网络之间的协议转换功能。它可以是软件、硬件或软硬件结合，处于传输层或更高层。</p>
+<h3 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h3><p>Router，主要用于局域网与广域网之间的连接，也可以用于局域网之间的连接，工作在网络层。路由器里有ARP映射表，用来根据IP地址寻址。连接因特网中各局域网、广域网的设备，根据信道的情况自动选择和设定路由，以最佳路径按前后顺序发送信号。路由器的互联能力强，可以执行复杂的路由选择算法。适合于连接复杂的大型网络。<br>家里有宽带就必须有调制解调器，有多台电脑上网就必须要路由器，假如电脑很多，超过路由器的接口数就需要交换机扩展接口。</p>
+<h3 id="中继器"><a href="#中继器" class="headerlink" title="中继器"></a>中继器</h3><p>转发器，通过放大物理信号来扩大数据传输距离，与高层协议无关，工作在物理层。</p>
+<h3 id="三层交换机ing"><a href="#三层交换机ing" class="headerlink" title="三层交换机ing"></a>三层交换机ing</h3><h2 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h2><p>网络协议是计算机网络和分布系统中互相通信的对等实体间交换信息时必须遵守的规则的集合。实体是指任何可发送或接收信息的硬件或软件进程。协议的组成要素有语法、语义和同步。语法定义了信息交换中信息的格式，语义定义了发送者和接受者所要完成的操作，它规定了需要发出何种控制信息，以及完成的动作与做出什么样的响应。同步又叫时序，是事件发生顺序的详细说明。</p>
+<h3 id="FTP协议"><a href="#FTP协议" class="headerlink" title="FTP协议"></a>FTP协议</h3><p>文件传输协议，一般用于文件的上传和下载，是基于传输控制协议的服务。</p>
+<h3 id="SMTP协议"><a href="#SMTP协议" class="headerlink" title="SMTP协议"></a>SMTP协议</h3><p>简单邮件传输协议，是一组用于由源地址到目的地址传送邮件的规则，由它来控制信件的中转方式，帮助每台计算机在发送或中转信件时找到下一个目的地。</p>
+<h3 id="POP协议"><a href="#POP协议" class="headerlink" title="POP协议"></a>POP协议</h3><p>邮局协议，用于电子邮件的接收</p>
+<h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><p>超文本传输协议，是互联网上应用最广泛的一种网络协议。互联网客户程序与服务器程序之间的交互，需要遵守的协议。所有www文件都必须遵守这个协议标准。设计HTTP协议最初是为了提供一种发布和接收HTML的方法。</p>
+<h3 id="Telnet协议"><a href="#Telnet协议" class="headerlink" title="Telnet协议"></a>Telnet协议</h3><p>远程登录协议，主要用途是使用远程计算机上所拥有的，而本地计算机上没有的资源</p>
+<h3 id="DNS协议"><a href="#DNS协议" class="headerlink" title="DNS协议"></a>DNS协议</h3><p>通过域名解析协议来转换域名和IP地址</p>
+<h3 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h3><p>用户数据报协议，应用在传输层，面向无连接的通信协议，通信时不需要连接，就可以实现广播发送；通信时也不需要接收方确认，属于不可靠的传输，在通讯过程中会出现丢包的现象。</p>
+<h3 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h3><p>网际协议，应用在网络层，它会给因特网中的每一台联网设备分配一个网络地址，即IP地址；并负责把数据报从源头传送到目的地，但它不负责可靠传输。</p>
+<h3 id="ICPM网际控制报文协议"><a href="#ICPM网际控制报文协议" class="headerlink" title="ICPM网际控制报文协议"></a>ICPM网际控制报文协议</h3><p>为IP协议提供差错报告，用于在IP主机、路由器之间传递控制消息。控制消息是指网络通不通、主机是否可达、路由是否可用等网络本身的消息。</p>
+<h3 id="ARP地址解析协议"><a href="#ARP地址解析协议" class="headerlink" title="ARP地址解析协议"></a>ARP地址解析协议</h3><p>将源主机和目的主机的逻辑地址（IP地址）与它们物理地址（MAC地址）相匹配，并确定IP地址所对应的网卡物理地址。</p>
+<h3 id="DHCP动态主机配置协议"><a href="#DHCP动态主机配置协议" class="headerlink" title="DHCP动态主机配置协议"></a>DHCP动态主机配置协议</h3><p>首先，保证任何IP地址在同一时刻只能由一台DHCP客户机所使用；其次，DHCP可以给用户分配永久固定的IP地址；最后，DHCP可以用其他方法获得IP地址（如手工配置）</p>
+<h2 id="网络参考模型"><a href="#网络参考模型" class="headerlink" title="网络参考模型"></a>网络参考模型</h2><h3 id="为什么使用网络参考模型"><a href="#为什么使用网络参考模型" class="headerlink" title="为什么使用网络参考模型"></a>为什么使用网络参考模型</h3><p>1、各层之间是独立的。<br>2、灵活性好。<br>3、易于实现和维护。<br>4、结构上可分割。<br>5、易于标准化。</p>
+<h3 id="两种参考模型概述"><a href="#两种参考模型概述" class="headerlink" title="两种参考模型概述"></a>两种参考模型概述</h3><h4 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h4><p>1、物理层主要功能是对数据传输线路和传输信道进行定义。传输的数据单元称之为比特流。<br>2、数据链路层在不可靠的物理介质上提供可靠的传输，主要功能是流量控制、差错控制、帧同步、透明传输等。传输的数据单元称之为数据帧。<br>3、网络层负责对子网间的数据报进行路由选择和IP寻址。网络层提供尽最大努力的交付服务，不提供校验，允许乱序。传输的数据单元称之为IP数据报（数据报、分组、包）。<br>4、运输层是第一个端到端传输的层次，主要功能是数据分段、可靠的或不可靠的传输、差错控制和流量控制。运输层传输的数据单位为TCP报文段或UDP用户数据报。<br>5、会话层管理主机之间的会话进程，即负责建立、管理、终止进程之间的会话。<br>6、表示层的功能包括数据的加密、压缩、格式转换等。协议有ASCII、JPEG、MPEG等。<br>7、应用层为操作系统或网络应用程序提供访问网络服务的接口。</p>
+<h4 id="TCP-x2F-IP协议参考模型"><a href="#TCP-x2F-IP协议参考模型" class="headerlink" title="TCP&#x2F;IP协议参考模型"></a>TCP&#x2F;IP协议参考模型</h4><p>1、应用层：应用程序之间沟通的层，如简单电子邮件传输（SMTP）、文件传输协议（FTP）、网络远程访问协议（Telnet）等。<br>2、传输层：在此层中，它负责应用程序间的通信和节点间的数据传送服务，如传输控制协议（TCP）、用户数据报协议（UDP）等，TCP和UDP给数据包加入传输数据并把它传输到下一层中，这一层负责数据传送数据，并且确定数据已被送达并接收。其功能包括：格式化信息流、提供可靠传输。<br>3、网络层：负责相邻计算机之间的通信，处理数据报、路径、流控、拥塞。让每一块数据包都能够到达目的主机（但不检查是否被正确接收），如网际协议（IP）。<br>4、网络接口层：定义物理介质的各种特性，定义如何使用实际网络来传送数据。处理数据帧。</p>
+<h4 id="TCP-x2F-IP和OSI的区别"><a href="#TCP-x2F-IP和OSI的区别" class="headerlink" title="TCP&#x2F;IP和OSI的区别"></a>TCP&#x2F;IP和OSI的区别</h4><p>1、TCP&#x2F;IP解决的是多种异构网络的互联问题，OSI最初只考虑使用一种标准的公用数据网。<br>2、TCP&#x2F;IP一开始就强调面向连接和无连接服务，而OSI在开始时只强调面向连接服务。<br>3、TCP&#x2F;IP有较好的网络管理功能，并在实际中得到应用。OSI只获得了一些理论研究成果，在市场化方面并不成功。</p>
+<h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><h4 id="一句话介绍"><a href="#一句话介绍" class="headerlink" title="一句话介绍"></a>一句话介绍</h4><p>确定与传输媒体的接口的一些特性：<br>机械特性：接线器的形状、尺寸、引线数等<br>电气特性：接口电缆各条线出现的电压范围<br>功能特性：某一电平电压的意义<br>规程特性：对不同功能的各种可能事件的出现顺序</p>
+<h4 id="几个术语"><a href="#几个术语" class="headerlink" title="几个术语"></a>几个术语</h4><p>信号：是数据的电气或电磁表现<br>数据：运送消息的实体<br>模拟：连续的；数字：离散的<br>信源-&gt;信道-&gt;信宿</p>
+<h4 id="通信方式"><a href="#通信方式" class="headerlink" title="通信方式"></a>通信方式</h4><h5 id="信息交互方式"><a href="#信息交互方式" class="headerlink" title="信息交互方式"></a>信息交互方式</h5><p>单工（单向）：广播；半双工（双向交替）：对讲机、无线电；双工（双向）：电话</p>
+<h5 id="网络交换方式"><a href="#网络交换方式" class="headerlink" title="网络交换方式"></a>网络交换方式</h5><p>电路交换：面向连接、实时性强<br>报文交换：无需建立连接、线路利用率高、可多目标服务<br>分组交换-虚电路方式：面向连接（逻辑连接），H1给H2所有分组沿着一条虚电路传送<br>分组交换-数据报方式：面向无连接，H1给H2的分组沿不同路径传送</p>
+<h5 id="数据传输类型"><a href="#数据传输类型" class="headerlink" title="数据传输类型"></a>数据传输类型</h5><p>局域网中距离近，用基带传输，直接传输数字信号<br>广域网需要远距离传送，将基带信号调制成频带信号传送，分为调幅、调频、调相，即将数字信号调制成模拟信号</p>
+<h4 id="香农定理"><a href="#香农定理" class="headerlink" title="香农定理"></a>香农定理</h4><p>信道极限传输速率&#x3D;信道带宽 * log2(1+信噪比)<br>信噪比是指信号在传输过程中，信号的平均功率和噪声的平均功率之比<br>由此得出：<br>（1）信道带宽和最大数据传输率成正比，信噪比和最大数据传输率成正比<br>（2）实际信道上能够达到的信息传输速率要比香农的极限传输速率低</p>
+<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><h4 id="一句话介绍-1"><a href="#一句话介绍-1" class="headerlink" title="一句话介绍"></a>一句话介绍</h4><p>链路是指从一个节点到相邻节点的一段物理线路，中间没有任何其他交换节点。把实现控制数据传输协议的硬件和软件添加到链路上就构成了数据链路</p>
+<h4 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h4><p>链路管理：建立、维护、释放、链接<br>帧同步：数据前后加首、尾部使接收方从接收到的比特流中确定帧开始和结束位置<br>差错检测：水平&#x2F;垂直奇偶校验码、循环冗余校验、海明校验（纠错编码）<br>透明传输：接收方能区分正常数据和控制信息</p>
+<h4 id="数据链路层提供的服务"><a href="#数据链路层提供的服务" class="headerlink" title="数据链路层提供的服务"></a>数据链路层提供的服务</h4><p>1、使用曼彻斯特编码<br>2、提供不可靠的交付，即尽最大努力的交付<br>3、目的站收到有差错的数据帧时丢弃、不纠错<br>4、高层发现丢失部分数据需要重传时，数据链路层不会知道这个重传的帧，会当做一个新数据帧来发送</p>
+<h4 id="多路访问协议"><a href="#多路访问协议" class="headerlink" title="多路访问协议"></a>多路访问协议</h4><p>可以分为信道划分协议、随机接入协议、轮流协议</p>
+<h5 id="信道划分协议"><a href="#信道划分协议" class="headerlink" title="信道划分协议"></a>信道划分协议</h5><p>频分多路复用（FDM）：每路信号以不同的载波频率进行调制，而且各个载波频率是完全独立的，即各个信道所占用的频带不相互重叠，相邻信道之间用”警戒频带“隔离，那么每个信道就能独立的传输一路信号。<br>时分多路复用（TDM）：以信道传输时间作为分割对象，通过为多个信道分配互不重叠的时间片段的方式来实现多路复用。<br>波分多路复用（WDM）：用一根光纤传输多路不同波长的信号，以提高单根光纤的传输能力<br>静态划分信道的代价高，不适合局域网</p>
+<h5 id="随机接入协议"><a href="#随机接入协议" class="headerlink" title="随机接入协议"></a>随机接入协议</h5><p>传输节点总是以信道的全部速率进行发送，当有碰撞时反复的发送，直到无碰撞的通过。<br>常用的有ALOHA协议和CSMA协议</p>
+<h6 id="载波监听多点接入-x2F-冲突检测（CSMA-x2F-CD）"><a href="#载波监听多点接入-x2F-冲突检测（CSMA-x2F-CD）" class="headerlink" title="载波监听多点接入&#x2F;冲突检测（CSMA&#x2F;CD）"></a>载波监听多点接入&#x2F;冲突检测（CSMA&#x2F;CD）</h6><p>1、许多计算机以多点接入方式连接一根总线<br>2、发送数据前先检测总线上是否有数据，没有再发，即载波监听<br>3、边发送数据边及检测信道上信号电压大小，一旦总线上出现碰撞，立即停止，并通知其他，即冲突检测<br>总之，先听后说，边听边说；一旦冲突，立即停说；等待时机，然后再说。<br>所以全双工不使用CSMA&#x2F;CD，半双工必须使用CSMA&#x2F;CD，以太网的平均通信量远小于以太网的最高数据率。适用于早起以太网，总线型网络。</p>
+<h5 id="轮流协议"><a href="#轮流协议" class="headerlink" title="轮流协议"></a>轮流协议</h5><p>比较重要的轮流协议有两种，分别是轮询协议和令牌传递协议</p>
+<h6 id="令牌传递协议"><a href="#令牌传递协议" class="headerlink" title="令牌传递协议"></a>令牌传递协议</h6><p>没有主节点，而是由一个称为令牌的小的特殊帧在节点之前以某种固定的次序进行交换</p>
+<h4 id="点对点协议PPP"><a href="#点对点协议PPP" class="headerlink" title="点对点协议PPP"></a>点对点协议PPP</h4><p>是使用最多的数据链路层的协议，比如拨号上网采用的就是PPP协议；<br>不需要纠错和流量控制；<br>有三个组成部分：<br>一个将IP数据报封装到串行链路的方法<br>链路控制协议LCP<br>网络控制协议NCP</p>
+<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><h4 id="IP协议原理"><a href="#IP协议原理" class="headerlink" title="IP协议原理"></a>IP协议原理</h4><h4 id="IP地址的分类"><a href="#IP地址的分类" class="headerlink" title="IP地址的分类"></a>IP地址的分类</h4><h4 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h4><h4 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h4><h4 id="ARP工作原理"><a href="#ARP工作原理" class="headerlink" title="ARP工作原理"></a>ARP工作原理</h4><h4 id="IP地址-amp-MAC地址-amp-ARP协同工作"><a href="#IP地址-amp-MAC地址-amp-ARP协同工作" class="headerlink" title="IP地址&amp;MAC地址&amp;ARP协同工作"></a>IP地址&amp;MAC地址&amp;ARP协同工作</h4><h3 id="运输层"><a href="#运输层" class="headerlink" title="运输层"></a>运输层</h3><h4 id="TCP三次握手"><a href="#TCP三次握手" class="headerlink" title="TCP三次握手"></a>TCP三次握手</h4><h4 id="TCP和UDP区别"><a href="#TCP和UDP区别" class="headerlink" title="TCP和UDP区别"></a>TCP和UDP区别</h4><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><h2 id="局域网"><a href="#局域网" class="headerlink" title="局域网"></a>局域网</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>局域网是指一个较小范围（如一个部门）内的多台计算机或者其他通信设备，通过双绞线、同轴电缆等介质互连起来，以达到资源和信息共享目的的互连网络。特点是，地理范围和站点数目优先，为一个单位所有，与采用非光纤技术的广域网相比，局域网具有较高的数据率、较低的时延和较小的误码率。IEEE802参考模型：逻辑链路控制（LLC）子层、媒体接入控制（MAC）子层。IEEE802针对物理层和数据链路层制定了一系列的协议标准。<br>优点：<br>1、具有广播功能<br>2、便于系统的扩展和演变，各个设备的位置可以灵活的调整<br>3、提高系统的可靠性、可用性、生存性<br>4、各个站点之间的关系是平等的，不存在主从关系</p>
+<h3 id="以太网（普遍采用）"><a href="#以太网（普遍采用）" class="headerlink" title="以太网（普遍采用）"></a>以太网（普遍采用）</h3><p>以太网初期采用总线型拓扑结构，但目前的快速以太网（100BASE-T、1000BASE-T标准）为了减少冲突，将能提高的网络速度和使用效率最大化，使用交换机来进行网络连接和组织。如此一来，以太网的拓扑结构就成了星型。但在逻辑上，以太网仍然使用总线型拓扑，这就需要用CSMA&#x2F;CD来规定多台电脑共享一个通道的方法。</p>
+<h4 id="MAC帧"><a href="#MAC帧" class="headerlink" title="MAC帧"></a>MAC帧</h4><p>1、硬件地址&#x3D;物理地址&#x3D;MAC地址，共48位，前3字节表示生产厂家，后3字节厂家自行指派用于表示产品号<br>2、MAC帧：目的地址6B+源地址6B+类型2B+数据大于等于46B+FCS(CRC校验)4位<br>3、MAC帧间最小间隔9.6s</p>
+<h4 id="高速以太网"><a href="#高速以太网" class="headerlink" title="高速以太网"></a>高速以太网</h4><p>传输速率大于等于100Mbit&#x2F;s的以太网成为高速以太网。分为100Base-T以太网（星型全双工无CSMA&#x2F;CD）和吉比特以太网（IEEE802.3标准）</p>
+<h3 id="令牌环网（落后）"><a href="#令牌环网（落后）" class="headerlink" title="令牌环网（落后）"></a>令牌环网（落后）</h3><h3 id="虚拟局域网（新技术）"><a href="#虚拟局域网（新技术）" class="headerlink" title="虚拟局域网（新技术）"></a>虚拟局域网（新技术）</h3><p>虚拟局域网（VLAN）是一组逻辑上的设备和用户，这些设备和用户并不受物理位置的限制，可以根据功能、部门及应用等因素将它们组织起来，相互之间的通信就好像它们在同一个网段中一样，由此得名虚拟局域网。VLAN是局域网给用户提供的一种服务，并不是一个新型的局域网。VLAN是一种比较新的技术，工作在OSI参考模型的第2层和第3层，一个VLAN就是一个广播域，VLAN之间的通信是通过第3层的路由器来完成的。只有3层及以上的交换机才能构建虚拟局域网。与传统的局域网技术相比较，VLAN技术更加灵活，它具有以下优点： 网络设备的移动、添加和修改的管理开销减少；可以控制广播活动；可提高网络的安全性。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/01/it/network1/" rel="prev" title="计算机网络-概述">
+      <i class="fa fa-chevron-left"></i> 计算机网络-概述
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/01/it/security1/" rel="next" title="计算机信息安全技术-概述ing">
+      计算机信息安全技术-概述ing <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8"><span class="nav-number">1.</span> <span class="nav-text">传输介质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E7%BA%BF%E4%BB%8B%E8%B4%A8"><span class="nav-number">1.1.</span> <span class="nav-text">有线介质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E7%BA%BF%E4%BB%8B%E8%B4%A8"><span class="nav-number">1.2.</span> <span class="nav-text">无线介质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">网络连接设备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E5%8D%A1"><span class="nav-number">2.1.</span> <span class="nav-text">网卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E5%88%B6%E8%A7%A3%E8%B0%83%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">调制解调器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BA%BF%E5%99%A8"><span class="nav-number">2.3.</span> <span class="nav-text">集线器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A4%E6%8D%A2%E6%9C%BA"><span class="nav-number">2.4.</span> <span class="nav-text">交换机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E6%A1%A5"><span class="nav-number">2.5.</span> <span class="nav-text">网桥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E5%85%B3"><span class="nav-number">2.6.</span> <span class="nav-text">网关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8"><span class="nav-number">2.7.</span> <span class="nav-text">路由器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E7%BB%A7%E5%99%A8"><span class="nav-number">2.8.</span> <span class="nav-text">中继器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BAing"><span class="nav-number">2.9.</span> <span class="nav-text">三层交换机ing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.</span> <span class="nav-text">协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FTP%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.1.</span> <span class="nav-text">FTP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SMTP%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.2.</span> <span class="nav-text">SMTP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POP%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.3.</span> <span class="nav-text">POP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.4.</span> <span class="nav-text">HTTP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Telnet%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.5.</span> <span class="nav-text">Telnet协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.6.</span> <span class="nav-text">DNS协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.7.</span> <span class="nav-text">UDP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IP%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.8.</span> <span class="nav-text">IP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ICPM%E7%BD%91%E9%99%85%E6%8E%A7%E5%88%B6%E6%8A%A5%E6%96%87%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.9.</span> <span class="nav-text">ICPM网际控制报文协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.10.</span> <span class="nav-text">ARP地址解析协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DHCP%E5%8A%A8%E6%80%81%E4%B8%BB%E6%9C%BA%E9%85%8D%E7%BD%AE%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.11.</span> <span class="nav-text">DHCP动态主机配置协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">网络参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.1.</span> <span class="nav-text">为什么使用网络参考模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B%E6%A6%82%E8%BF%B0"><span class="nav-number">4.2.</span> <span class="nav-text">两种参考模型概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.2.1.</span> <span class="nav-text">OSI参考模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP-x2F-IP%E5%8D%8F%E8%AE%AE%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.2.2.</span> <span class="nav-text">TCP&#x2F;IP协议参考模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP-x2F-IP%E5%92%8COSI%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.2.3.</span> <span class="nav-text">TCP&#x2F;IP和OSI的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82"><span class="nav-number">4.3.</span> <span class="nav-text">物理层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E5%8F%A5%E8%AF%9D%E4%BB%8B%E7%BB%8D"><span class="nav-number">4.3.1.</span> <span class="nav-text">一句话介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%A0%E4%B8%AA%E6%9C%AF%E8%AF%AD"><span class="nav-number">4.3.2.</span> <span class="nav-text">几个术语</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-number">4.3.3.</span> <span class="nav-text">通信方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E4%BA%A4%E4%BA%92%E6%96%B9%E5%BC%8F"><span class="nav-number">4.3.3.1.</span> <span class="nav-text">信息交互方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E4%BA%A4%E6%8D%A2%E6%96%B9%E5%BC%8F"><span class="nav-number">4.3.3.2.</span> <span class="nav-text">网络交换方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.3.3.3.</span> <span class="nav-text">数据传输类型</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A6%99%E5%86%9C%E5%AE%9A%E7%90%86"><span class="nav-number">4.3.4.</span> <span class="nav-text">香农定理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82"><span class="nav-number">4.4.</span> <span class="nav-text">数据链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E5%8F%A5%E8%AF%9D%E4%BB%8B%E7%BB%8D-1"><span class="nav-number">4.4.1.</span> <span class="nav-text">一句话介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD"><span class="nav-number">4.4.2.</span> <span class="nav-text">基本功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E6%8F%90%E4%BE%9B%E7%9A%84%E6%9C%8D%E5%8A%A1"><span class="nav-number">4.4.3.</span> <span class="nav-text">数据链路层提供的服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E8%B7%AF%E8%AE%BF%E9%97%AE%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.4.4.</span> <span class="nav-text">多路访问协议</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BF%A1%E9%81%93%E5%88%92%E5%88%86%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.4.4.1.</span> <span class="nav-text">信道划分协议</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%8E%A5%E5%85%A5%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.4.4.2.</span> <span class="nav-text">随机接入协议</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BD%BD%E6%B3%A2%E7%9B%91%E5%90%AC%E5%A4%9A%E7%82%B9%E6%8E%A5%E5%85%A5-x2F-%E5%86%B2%E7%AA%81%E6%A3%80%E6%B5%8B%EF%BC%88CSMA-x2F-CD%EF%BC%89"><span class="nav-number">4.4.4.2.1.</span> <span class="nav-text">载波监听多点接入&#x2F;冲突检测（CSMA&#x2F;CD）</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BD%AE%E6%B5%81%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.4.4.3.</span> <span class="nav-text">轮流协议</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%BB%A4%E7%89%8C%E4%BC%A0%E9%80%92%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.4.4.3.1.</span> <span class="nav-text">令牌传递协议</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%82%B9%E5%AF%B9%E7%82%B9%E5%8D%8F%E8%AE%AEPPP"><span class="nav-number">4.4.5.</span> <span class="nav-text">点对点协议PPP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="nav-number">4.5.</span> <span class="nav-text">网络层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IP%E5%8D%8F%E8%AE%AE%E5%8E%9F%E7%90%86"><span class="nav-number">4.5.1.</span> <span class="nav-text">IP协议原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IP%E5%9C%B0%E5%9D%80%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">4.5.2.</span> <span class="nav-text">IP地址的分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%90%E7%BD%91%E5%88%92%E5%88%86"><span class="nav-number">4.5.3.</span> <span class="nav-text">子网划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D"><span class="nav-number">4.5.4.</span> <span class="nav-text">域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ARP%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">4.5.5.</span> <span class="nav-text">ARP工作原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IP%E5%9C%B0%E5%9D%80-amp-MAC%E5%9C%B0%E5%9D%80-amp-ARP%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C"><span class="nav-number">4.5.6.</span> <span class="nav-text">IP地址&amp;MAC地址&amp;ARP协同工作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%BE%93%E5%B1%82"><span class="nav-number">4.6.</span> <span class="nav-text">运输层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="nav-number">4.6.1.</span> <span class="nav-text">TCP三次握手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP%E5%92%8CUDP%E5%8C%BA%E5%88%AB"><span class="nav-number">4.6.2.</span> <span class="nav-text">TCP和UDP区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82"><span class="nav-number">4.7.</span> <span class="nav-text">应用层</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="nav-number">5.</span> <span class="nav-text">局域网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">5.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5%E5%A4%AA%E7%BD%91%EF%BC%88%E6%99%AE%E9%81%8D%E9%87%87%E7%94%A8%EF%BC%89"><span class="nav-number">5.2.</span> <span class="nav-text">以太网（普遍采用）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MAC%E5%B8%A7"><span class="nav-number">5.2.1.</span> <span class="nav-text">MAC帧</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AB%98%E9%80%9F%E4%BB%A5%E5%A4%AA%E7%BD%91"><span class="nav-number">5.2.2.</span> <span class="nav-text">高速以太网</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A4%E7%89%8C%E7%8E%AF%E7%BD%91%EF%BC%88%E8%90%BD%E5%90%8E%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">令牌环网（落后）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91%EF%BC%88%E6%96%B0%E6%8A%80%E6%9C%AF%EF%BC%89"><span class="nav-number">5.4.</span> <span class="nav-text">虚拟局域网（新技术）</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">许云筝</p>
+  <div class="site-description" itemprop="description">看得见远方，追的上路人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">Kategorien</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">许云筝</span>
+</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
