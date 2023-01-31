@@ -4,16 +4,16 @@
   
   
   <entry>
-    <title>mac常用命令</title>
-    <link href="/2023/01/30/tool/command/"/>
-    <url>/2023/01/30/tool/command/</url>
+    <title>excel</title>
+    <link href="/2023/01/31/office/excel/"/>
+    <url>/2023/01/31/office/excel/</url>
     
-    <content type="html"><![CDATA[<p>文件相关</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">新建目录：mkdir xxx</span><br><span class="line">新建文件：touch xxx</span><br><span class="line">删除文件：rm xxx   </span><br><span class="line">删除目录：rm -r xxx  </span><br><span class="line">打开文件：vim XXX</span><br><span class="line">退出文件：:q</span><br><span class="line">编辑文件：i</span><br><span class="line">退出编辑模式：esc</span><br><span class="line">保存退出：:wq</span><br><span class="line">行标：:set number</span><br></pre></td></tr></table></figure><p>查询网络端口占用：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat -an | grep 端口号</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>进程相关：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">查看进程占用</span><br><span class="line"></span><br><span class="line">lsof -i tcp:8080</span><br><span class="line"></span><br><span class="line">该命令会显示占用8080端口的进程，有其 pid ,可以通过pid关掉该进程</span><br><span class="line"></span><br><span class="line">杀死进程</span><br><span class="line"></span><br><span class="line">kill pid</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查看host：</span><br><span class="line">vim /etc/hosts</span><br></pre></td></tr></table></figure><p>nginx：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">重载nginx配置：</span><br><span class="line">sudo nginx -s reload</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="数据快捷键"><a href="#数据快捷键" class="headerlink" title="数据快捷键"></a>数据快捷键</h2><h3 id="VLOOKUP-A2-Sheet2-D-F-3-0"><a href="#VLOOKUP-A2-Sheet2-D-F-3-0" class="headerlink" title="VLOOKUP(A2,Sheet2!D:F,3,0)"></a>VLOOKUP(A2,Sheet2!D:F,3,0)</h3><p>在Sheet2的D列精确匹配与当前工作表的A2相同的单元格，并返回对应第3列（Sheet2的F列）的数据。参考：<a href="https://blog.51cto.com/u_15290190/2961174">https://blog.51cto.com/u_15290190/2961174</a></p>]]></content>
     
     
     <categories>
       
-      <category>工具</category>
+      <category>办公软件</category>
       
     </categories>
     
@@ -23,12 +23,94 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2023/01/30/hello-world/"/>
-    <url>/2023/01/30/hello-world/</url>
+    <title>common</title>
+    <link href="/2022/01/05/publicstudy/common/"/>
+    <url>/2022/01/05/publicstudy/common/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
+    
+    <categories>
+      
+      <category>根栈</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>logic</title>
+    <link href="/2021/12/01/publicstudy/logic/"/>
+    <url>/2021/12/01/publicstudy/logic/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>根栈</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>count</title>
+    <link href="/2021/11/01/publicstudy/count/"/>
+    <url>/2021/11/01/publicstudy/count/</url>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th align="center">变量</th><th align="center">公式</th></tr></thead><tbody><tr><td align="center">基期</td><td align="center">现期-增长量；现期&#x2F;（1+增长率）</td></tr><tr><td align="center">现期</td><td align="center">基期+增长量；基期*（1+增长率）</td></tr><tr><td align="center">增长量</td><td align="center">现期-基期；基期<em>增长率； 现期</em>增长率&#x2F;(1+增长率)</td></tr><tr><td align="center">增长率</td><td align="center">增长量&#x2F;基期；增长量&#x2F;（现期-增长量）</td></tr><tr><td align="center">比重</td><td align="center">部分A&#x2F;整体B</td></tr><tr><td align="center">基期比重</td><td align="center">A*(1+B增长率)&#x2F;B*（1+A增长率）</td></tr><tr><td align="center"></td><td align="center"></td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>根栈</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>math</title>
+    <link href="/2021/11/01/publicstudy/math/"/>
+    <url>/2021/11/01/publicstudy/math/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>根栈</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>speak</title>
+    <link href="/2021/10/01/publicstudy/speak/"/>
+    <url>/2021/10/01/publicstudy/speak/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>根栈</category>
+      
+    </categories>
     
     
   </entry>
@@ -46,44 +128,6 @@
     <categories>
       
       <category>IT栈</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Vue3（框架实践ing）</title>
-    <link href="/2021/09/01/fe/second-vue/"/>
-    <url>/2021/09/01/fe/second-vue/</url>
-    
-    <content type="html"><![CDATA[<p>333</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>前端栈</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>node高频</title>
-    <link href="/2021/08/20/tool/node%E9%AB%98%E9%A2%91/"/>
-    <url>/2021/08/20/tool/node%E9%AB%98%E9%A2%91/</url>
-    
-    <content type="html"><![CDATA[<h2 id="nvm包管理"><a href="#nvm包管理" class="headerlink" title="nvm包管理"></a>nvm包管理</h2><p>nvm ls 列出所有安装的版本<br>nvm use 切换使用指定的版本node<br>nvm install 安装指定版本<br>nvm uninstall 删除已安装的指定版本<br>nvm reinstall-packages 在当前版本node环境下，重新全局安装指定版本号的npm包</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>工具</category>
       
     </categories>
     
@@ -245,6 +289,25 @@
   
   
   <entry>
+    <title>node高频</title>
+    <link href="/2020/10/20/tool/node%E9%AB%98%E9%A2%91/"/>
+    <url>/2020/10/20/tool/node%E9%AB%98%E9%A2%91/</url>
+    
+    <content type="html"><![CDATA[<h2 id="nvm包管理"><a href="#nvm包管理" class="headerlink" title="nvm包管理"></a>nvm包管理</h2><p>nvm ls 列出所有安装的版本<br>nvm use 切换使用指定的版本node<br>nvm install 安装指定版本<br>nvm uninstall 删除已安装的指定版本<br>nvm reinstall-packages 在当前版本node环境下，重新全局安装指定版本号的npm包</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>TS(ing)</title>
     <link href="/2020/06/20/fe/ts/"/>
     <url>/2020/06/20/fe/ts/</url>
@@ -264,16 +327,16 @@
   
   
   <entry>
-    <title>Hybrid(ing)</title>
-    <link href="/2020/01/20/fe/hybrid/"/>
-    <url>/2020/01/20/fe/hybrid/</url>
+    <title>mac常用命令</title>
+    <link href="/2020/02/01/tool/command/"/>
+    <url>/2020/02/01/tool/command/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>文件相关</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">新建目录：<span class="hljs-built_in">mkdir</span> xxx<br>新建文件：<span class="hljs-built_in">touch</span> xxx<br>删除文件：<span class="hljs-built_in">rm</span> xxx   <br>删除目录：<span class="hljs-built_in">rm</span> -r xxx  <br>打开文件：vim XXX<br>退出文件：:q<br>编辑文件：i<br>退出编辑模式：esc<br>保存退出：:wq<br>行标：:<span class="hljs-built_in">set</span> number<br></code></pre></td></tr></table></figure><p>查询网络端口占用：</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 1c">netstat -an <span class="hljs-string">| grep 端口号</span><br><br></code></pre></td></tr></table></figure><p>进程相关：</p><figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs tcl">查看进程占用<br><br>lsof -i tcp:<span class="hljs-number">8080</span><br><br>该命令会显示占用<span class="hljs-number">8080</span>端口的进程，有其 <span class="hljs-keyword">pid</span> ,可以通过<span class="hljs-keyword">pid</span>关掉该进程<br><br>杀死进程<br><br>kill <span class="hljs-keyword">pid</span><br></code></pre></td></tr></table></figure><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">查看host：<br>vim <span class="hljs-regexp">/etc/</span>hosts<br></code></pre></td></tr></table></figure><p>nginx：</p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">重载nginx配置：<br>sudo nginx -s <span class="hljs-keyword">reload</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
       
-      <category>前端栈</category>
+      <category>工具</category>
       
     </categories>
     
