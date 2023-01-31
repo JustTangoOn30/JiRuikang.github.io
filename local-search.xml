@@ -8,7 +8,7 @@
     <link href="/2023/01/31/office/excel/"/>
     <url>/2023/01/31/office/excel/</url>
     
-    <content type="html"><![CDATA[<h2 id="数据快捷键"><a href="#数据快捷键" class="headerlink" title="数据快捷键"></a>数据快捷键</h2><h3 id="VLOOKUP-A2-Sheet2-D-F-3-0"><a href="#VLOOKUP-A2-Sheet2-D-F-3-0" class="headerlink" title="VLOOKUP(A2,Sheet2!D:F,3,0)"></a>VLOOKUP(A2,Sheet2!D:F,3,0)</h3><p>在Sheet2的D列精确匹配与当前工作表的A2相同的单元格，并返回对应第3列（Sheet2的F列）的数据。参考：<a href="https://blog.51cto.com/u_15290190/2961174">https://blog.51cto.com/u_15290190/2961174</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p>筛选：Ctrl + CapsLock + L</p><h3 id="VLOOKUP-A2-Sheet2-D-F-3-0"><a href="#VLOOKUP-A2-Sheet2-D-F-3-0" class="headerlink" title="VLOOKUP(A2,Sheet2!D:F,3,0)"></a>VLOOKUP(A2,Sheet2!D:F,3,0)</h3><p>在Sheet2的D列精确匹配与当前工作表的A2相同的单元格，并返回对应第3列（Sheet2的F列）的数据。参考：<a href="https://blog.51cto.com/u_15290190/2961174">https://blog.51cto.com/u_15290190/2961174</a></p><h3 id="合并表格"><a href="#合并表格" class="headerlink" title="合并表格"></a>合并表格</h3><p>工具栏-数据-合并表格：需要会员；<br>拆分表格等同于合并表格；</p><h3 id="重命名表格"><a href="#重命名表格" class="headerlink" title="重命名表格"></a>重命名表格</h3><p>厂名</p>]]></content>
     
     
     <categories>
@@ -65,7 +65,7 @@
     <link href="/2021/11/01/publicstudy/count/"/>
     <url>/2021/11/01/publicstudy/count/</url>
     
-    <content type="html"><![CDATA[<table><thead><tr><th align="center">变量</th><th align="center">公式</th></tr></thead><tbody><tr><td align="center">基期</td><td align="center">现期-增长量；现期&#x2F;（1+增长率）</td></tr><tr><td align="center">现期</td><td align="center">基期+增长量；基期*（1+增长率）</td></tr><tr><td align="center">增长量</td><td align="center">现期-基期；基期<em>增长率； 现期</em>增长率&#x2F;(1+增长率)</td></tr><tr><td align="center">增长率</td><td align="center">增长量&#x2F;基期；增长量&#x2F;（现期-增长量）</td></tr><tr><td align="center">比重</td><td align="center">部分A&#x2F;整体B</td></tr><tr><td align="center">基期比重</td><td align="center">A*(1+B增长率)&#x2F;B*（1+A增长率）</td></tr><tr><td align="center"></td><td align="center"></td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<table><thead><tr><th align="center">变量</th><th align="center">公式</th></tr></thead><tbody><tr><td align="center">基期</td><td align="center">现期-增长量；现期&#x2F;（1+增长率）</td></tr><tr><td align="center">现期</td><td align="center">基期+增长量；基期*（1+增长率）</td></tr><tr><td align="center">增长量</td><td align="center">现期-基期；基期<em>增长率； 现期</em>增长率&#x2F;(1+增长率)</td></tr><tr><td align="center">增长率</td><td align="center">增长量&#x2F;基期；增长量&#x2F;（现期-增长量）</td></tr><tr><td align="center">现期比重</td><td align="center">部分值A&#x2F;整体值B</td></tr><tr><td align="center">基期比重</td><td align="center">A<em>（1+B增长率）&#x2F;B</em>（1+A增长率）；（A-部分增长量）&#x2F;（B-整体增长量）</td></tr><tr><td align="center">比重增长量</td><td align="center">A*（A增长率-B增长率）&#x2F;（1+A增长率）</td></tr><tr><td align="center">现期倍数</td><td align="center">A是B的多少倍A&#x2F;B；A比B多&#x2F;增加（A&#x2F;B-1）倍</td></tr><tr><td align="center">基期倍数</td><td align="center">A<em>（1+B的增长率）&#x2F;B</em>（1+A的增长率）</td></tr><tr><td align="center">现期平均数</td><td align="center">总量&#x2F;份数；（部分1+部分2+……）&#x2F;份数</td></tr><tr><td align="center">基期平均数</td><td align="center">现期总量<em>（1+份增长率）&#x2F;份数总量</em>（1+总量增长率）</td></tr><tr><td align="center">平均数增长量</td><td align="center">现期总量<em>（总量增长率-份数增长率）&#x2F;份数</em>（1+总量增长率）</td></tr><tr><td align="center">平均数增长率</td><td align="center">（总量增长率-份数增长率）&#x2F;（1+份数增长率）</td></tr><tr><td align="center">隔年增长率</td><td align="center">（1+增长率）（1+上年增长率） - 1</td></tr><tr><td align="center">隔年基期值</td><td align="center">现期值&#x2F;（1+增长率）（1+上年增长率）</td></tr><tr><td align="center">年均增长量</td><td align="center">（末期值 - 基期值）&#x2F;增长次数</td></tr><tr><td align="center">年均增长率</td><td align="center">（末期值&#x2F;基期值）的根号增长次数次方-1</td></tr><tr><td align="center">贡献率</td><td align="center">部分增长量&#x2F;整体增长量</td></tr><tr><td align="center">拉动增长的百分点数</td><td align="center">部分增长量&#x2F;整体基期值；贡献率*整体增长率</td></tr><tr><td align="center">整体增长率</td><td align="center">介于多个部分增长率之间，且偏向于权重较大的一方</td></tr></tbody></table>]]></content>
     
     
     <categories>
@@ -103,7 +103,7 @@
     <link href="/2021/10/01/publicstudy/speak/"/>
     <url>/2021/10/01/publicstudy/speak/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
     
     
     <categories>
